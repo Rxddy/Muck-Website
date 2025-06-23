@@ -10,28 +10,6 @@ body {
     color: #464655;
     line-height: 1.6;
     overflow-x: hidden;
-    position: relative;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('images/Chunk.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    opacity: 0.1;
-    z-index: -1;
-}Comic Sans MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #EDDFEF, #D5CFE1, #B7B6C1);
-    color: #464655;
-    line-height: 1.6;
-    overflow-x: hidden;
 }
 
 .container {
@@ -111,7 +89,7 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('images/Muck.png');
+    background-image: url('images/muck.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -866,7 +844,6 @@ footer {
     right: 0;
     width: 40%;
     height: 100%;
-    background-image: url('images/Chunk.png');
     background-size: contain;
     background-position: center right;
     background-repeat: no-repeat;
