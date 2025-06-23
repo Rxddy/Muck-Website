@@ -10,6 +10,28 @@ body {
     color: #464655;
     line-height: 1.6;
     overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/Chunk.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.1;
+    z-index: -1;
+}Comic Sans MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #EDDFEF, #D5CFE1, #B7B6C1);
+    color: #464655;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
@@ -79,6 +101,27 @@ nav {
     background: linear-gradient(45deg, #EDDFEF, #D5CFE1, #B7B6C1, #94958B);
     background-size: 400% 400%;
     animation: gradientShift 8s ease infinite;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/Muck.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 @keyframes gradientShift {
@@ -103,11 +146,32 @@ nav {
     text-shadow: 2px 2px 0px #EDDFEF;
     transform: rotate(-1deg);
     box-shadow: 0 8px 16px rgba(70, 70, 85, 0.3);
+    overflow: hidden;
+    position: relative;
 }
 
 .muck-logo::before {
     content: "MUCK";
     animation: bounce 2s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image {
+    display: none;
+}
+
+.boss-image {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.boss-img {
+    max-width: 150px;
+    max-height: 100px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 2px solid #94958B;
 }
 
 @keyframes bounce {
@@ -788,6 +852,39 @@ footer {
     section {
         padding: 3rem 0;
     }
+}
+
+/* Boss card with background */
+.boss-card {
+    position: relative;
+}
+
+.boss-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-image: url('images/Chunk.png');
+    background-size: contain;
+    background-position: center right;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.boss-card * {
+    position: relative;
+    z-index: 2;
+}
+
+.boss-image {
+    display: none;
+}
+
+.boss-img {
+    display: none;
 }
 
 /* Animations */
